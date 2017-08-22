@@ -1,0 +1,45 @@
+---
+title: "Capstone Project Proposal"
+author: "Laura Cortes"
+date: "August 9, 2017"
+output: html_document
+---
+## Capstone Project Proposal  
+
+### What is the problem you want to solve?  
+
+No matter how developed a country is, there is a risk associated with pregnacy and childbirth, the United States, for example, has the highest maternal mortality rate in the industrialized world. Therefore it is important that women that are not planning to become mothers in the near future have access to birth control. For this, I want to predict what is the contraceptive method of their choice based in their socio-economic and demographic background.
+
+### Who is your client and why do they care about this problem?  
+
+My client could be the administrator of a state health department who needs to know what are the contraceptives preferred by women to provide its health clinics with the resources needed.
+
+### What data are you going to use for this?
+
+I'm going to use a dataset extracted of the 1987 National Indonesia Contraceptive Prevalence Survey. The dataset includes the following attributes:
+
+Attribute                   | Type  
+----------------------------| ----------------------
+Wife's age                  | numerical
+Wife's education            | categorical
+Husband's education         | categorical
+Number of children ever born| numerical
+Wife's religion             | binary
+Wife's now working?         | binary
+Husband's occupation        | categorical
+Standard-of-living index    | categorical
+Media exposure              | binary
+Contraceptive method used   | class attribute (1=No-use, 2=Long-term, 3=Short-term)
+
+### In brief, outline yur approach to solving this problem (knowing that this might change later).  
+
+1. Review the dataset to verify that all the information I need is there.
+2. Verify if there is a need for data wrangling, if so, perform it. 
+3. Analyze the data (exploratory data analysys) to identify key information.
+
+### What are your deliverables?  
+
+The deliverables will be the code used for the analysis, final paper, and visual representations.
+
+ 
+
