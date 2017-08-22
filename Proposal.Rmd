@@ -8,7 +8,7 @@ output: html_document
 
 ### What is the problem you want to solve?  
 
-No matter how developed a country is, there is a risk associated with pregnacy and childbirth, the United States, for example, has the highest maternal mortality rate in the industrialized world. Therefore it is important that women that are not planning to become mothers in the near future have access to birth control. For this, I want to predict what is the contraceptive method of their choice based in their socio-economic and demographic background.
+No matter how developed a country is, there is a risk associated with pregnancy and childbirth, the United States, for example, has the highest maternal mortality rate in the industrialized world. Therefore it is important that women that are not planning to become mothers in the near future have access to birth control. For this, I want to predict what is the contraceptive method of their choice based in their socio-economic and demographic background.
 
 ### Who is your client and why do they care about this problem?  
 
