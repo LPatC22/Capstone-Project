@@ -1,0 +1,25 @@
+
+Ideas for my Capstone Project
+
+Idea 1. I want to predict the number of people that move from the state of Tennessee to the state of Michigan.
+This information could help a human resources department when making offers for relocation to people they are 
+interested in hiring. 
+
+Idea 2. I want to predict the cover type that appears in a forest based on several physical factors.
+Data Set: http://archive.ics.uci.edu/ml/machine-learning-databases/covtype/
+This information could help a department of agriculture, or activist group (against top mountain removal, for example)
+to know what kind of vegetation is present in the very high part of the mountain that cannot be reached by hiking. 
+
+Idea 3. I want to predict the contraceptive method choice(no use, short-term method, long-term method) of a woman based
+on her socio-economic characteristics. 
+Data Set: http://archive.ics.uci.edu/ml/machine-learning-databases/cmc/
+This information would be useful to the administrator of a department of health that wants to make sure the women 
+around its clinics have available the contraceptive method of their choice. 
+
+
+Notes:
+
+Idea 1: I looked up for a dataset with the factors involved in people migrating from one city to another, but 
+couldn't find it. I found not one, but several data sets for groups of factor, but not with all factors. They are
+heavy datasets (data.gov) and all of them contain metadata. Thus I decided to drop this out.
+
