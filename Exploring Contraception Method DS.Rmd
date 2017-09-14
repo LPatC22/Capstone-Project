@@ -1,0 +1,86 @@
+---
+title: "Exploring_CM"
+author: "Laura Cortes"
+date: "September 14, 2017"
+output: html_document
+--- 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Contraception Method - Exploratory Analysis
+
+```{r echo = FALSE}
+
+# Contraception Method Dataset
+
+library(ggplot2)
+library(tidyverse)
+
+#Read in the data
+
+cmc <- read.table("https://archive.ics.uci.edu/ml/machine-learning-databases/cmc/cmc.data", sep=",")
+
+# Attribute Information:
+# 
+#    1. Wife's age                     (numerical)
+#    2. Wife's education               (categorical)      1=low, 2, 3, 4=high
+#    3. Husband's education            (categorical)      1=low, 2, 3, 4=high
+#    4. Number of children ever born   (numerical)
+#    5. Wife's religion                (binary)           0=Non-Islam, 1=Islam
+#    6. Wife's now working?            (binary)           0=Yes, 1=No
+#    7. Husband's occupation           (categorical)      1, 2, 3, 4
+#    8. Standard-of-living index       (categorical)      1=low, 2, 3, 4=high
+#    9. Media exposure                 (binary)           0=Good, 1=Not good
+#    10. Contraceptive method used     (class attribute)  1=No-use 
+#                                                         2=Long-term
+#                                                         3=Short-term
+
+#Add column names
+colnames(cmc) <- c("WifeAge","WifeEdu","HusbandEdu","Children","WifeReligion",
+                   "Working","HusbandOcc","SOLIndex","MediaExp","Method")
+
+#Take a look at the data structure
+str(cmc)
+
+#Convert to factor variables (Only 2 out of the 10 variables are numerical)
+cmc[2:3] <- lapply(cmc[2:3], factor)
+cmc[5:10] <- lapply(cmc[5:10], factor)
+
+#Exploratory Data Analysis
+#Vertical facets
+
+```
+## Density Curve for Number of Children
+```{r echo = TRUE}
+ggplot(cmc, aes(x=Children)) + geom_histogram(aes(y=..density..),binwidth = 3)+
+  stat_function(fun=dnorm, colour='red',
+                args=list(mean=mean(cmc$Children, na.rm=T),
+                          sd=sd(cmc$Children, na.rm=T)))
+
+
+```
+
+
+## Wife's Age and Number of Children
+```{r echo = TRUE}
+ggplot(cmc, aes(x = WifeAge, y = Children, color = Method)) + 
+  geom_jitter(alpha = 0.9) + facet_grid(. ~ Method)
+
+``` 
+  
+  
+### Comments:
+On the previous plots we observe there are women with more than 10 children.
+
+On the second plot we observe that the women with more than 10 children are 35 years old, or older, which make some sense (?).  
+
+Should we consider the children over 12 as outliers (4 cases)? 
+
+
+
+ 
+
+ 
+
