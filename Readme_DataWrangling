@@ -1,0 +1,9 @@
+Data Wrangling on Capstone Project: Contraception Method
+
+original dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/cmc/cmc.data
+Script: DataWranglingOnCM
+Created file: cmc_clean.csv
+
+Note: I still need to discuss with my mentor the cut-off for extreme values,
+      and also with which values we can replace the extreme we found. I initially
+      used the mean values.
